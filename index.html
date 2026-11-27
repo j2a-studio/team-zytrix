@@ -1082,6 +1082,50 @@ button:disabled{opacity:.6;cursor:not-allowed}
 .wchip span{display:inline-block;padding:6px 12px;border-radius:8px;border:1px solid var(--border2);background:var(--surface2);color:var(--text3);font-size:12px;font-weight:600;cursor:pointer}
 .wchip input:checked+span{background:#6366f122;border-color:var(--indigo);color:var(--indigo)}
 @media(max-width:700px){.wgrid{grid-template-columns:1fr}.wsh .search-input{max-width:none;width:100%}}
+
+/* ═══ TikTok v2: Monetized / Unmonetized sections ═══ */
+.ttx-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:4px 0 14px}
+.ttx-chips{display:flex;gap:6px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:4px}
+.ttx-chip{border:none;background:transparent;color:var(--text4);font-weight:700;font-size:12px;padding:7px 12px;border-radius:9px;cursor:pointer;font-family:inherit;display:flex;gap:6px;align-items:center}
+.ttx-chip b{font-size:10px;background:var(--surface3);color:var(--text3);border-radius:999px;padding:1px 7px}
+.ttx-chip.on{background:linear-gradient(135deg,#ff004f,#7928ca);color:#fff}
+.ttx-chip.on b{background:#ffffff33;color:#fff}
+.ttx-search{flex:1;min-width:160px;background:var(--surface);border:1px solid var(--border2);border-radius:11px;padding:10px 13px;color:var(--text);font-size:13px;font-family:inherit}
+.ttx-add-btn{border:none;color:#fff;border-radius:11px;padding:10px 16px;font-weight:800;font-size:13px;background:linear-gradient(135deg,#ff004f,#7928ca);cursor:pointer;font-family:inherit;box-shadow:0 6px 18px #ff004f33}
+.ttx-form{display:none;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:16px;margin-bottom:14px}
+.ttx-form.show{display:block;animation:j2aFade .2s ease-out}
+.ttx-form-title{font-weight:800;font-size:13px;margin-bottom:12px}
+.ttx-form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-bottom:12px}
+.ttx-f{display:flex;flex-direction:column;gap:5px}
+.ttx-f>span{font-size:10px;font-weight:700;color:var(--text5);letter-spacing:.5px}
+.ttx-f-row{justify-content:flex-end}
+.ttx-sec{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:14px;margin-bottom:16px;position:relative;overflow:hidden}
+.ttx-sec::before{content:'';position:absolute;left:0;right:0;top:0;height:3px}
+.ttx-sec.mon::before{background:linear-gradient(90deg,#22c55e,#4ade80)}
+.ttx-sec.unmon::before{background:linear-gradient(90deg,#f59e0b,#fcd34d)}
+.ttx-sec-head{display:flex;align-items:center;gap:11px;margin-bottom:12px}
+.ttx-sec-ic{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:19px;flex-shrink:0}
+.ttx-sec.mon .ttx-sec-ic{background:#22c55e1a;border:1px solid #22c55e44}
+.ttx-sec.unmon .ttx-sec-ic{background:#f59e0b1a;border:1px solid #f59e0b44}
+.ttx-sec-t{font-weight:900;font-size:15px}
+.ttx-sec-s{font-size:11px;color:var(--text4);margin-top:2px}
+.ttx-sec-n{margin-left:auto;font-size:22px;font-weight:900}
+.ttx-sec.mon .ttx-sec-n{color:#4ade80}.ttx-sec.unmon .ttx-sec-n{color:#fcd34d}
+.ttx-grp{font-size:11px;font-weight:800;color:var(--text4);letter-spacing:.5px;margin:12px 2px 8px;display:flex;align-items:center;gap:8px}
+.ttx-grp::after{content:'';flex:1;height:1px;background:var(--border)}
+.ttx-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
+.ttx-grid .tt-acc-card{margin-bottom:0}
+.ttx-empty{color:var(--text5);font-size:12px;text-align:center;padding:18px;border:1px dashed var(--border2);border-radius:12px}
+.ttx-crit{display:flex;flex-direction:column;gap:8px;margin-top:10px;background:var(--bg);border:1px solid var(--border);border-radius:11px;padding:10px 12px}
+.ttx-crit-row{display:grid;grid-template-columns:auto 1fr auto;gap:8px;align-items:center;font-size:11px;font-weight:700;color:var(--text3)}
+.ttx-bar2{height:6px;background:var(--surface3);border-radius:999px;overflow:hidden}
+.ttx-bar2>i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#f59e0b,#fcd34d);transition:width .3s}
+.ttx-bar2>i.ok{background:linear-gradient(90deg,#22c55e,#4ade80)}
+.ttx-crit-v{font-variant-numeric:tabular-nums;color:var(--text4);white-space:nowrap}
+.ttx-ready{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:11px;font-weight:800;color:#4ade80}
+.ttx-ready button{border:none;background:#22c55e;color:#04210f;font-weight:900;border-radius:8px;padding:6px 10px;font-size:11px;cursor:pointer;font-family:inherit}
+.ttx-reg{font-size:10px;font-weight:800;border-radius:999px;padding:2px 8px;margin-left:6px;background:var(--surface3);color:var(--text3);vertical-align:middle}
+@media(max-width:600px){.ttx-grid{grid-template-columns:1fr}.ttx-bar{gap:8px}.ttx-chips{width:100%;justify-content:space-between}.ttx-chip{flex:1;justify-content:center}.ttx-add-btn{width:100%}}
 </style>
 <style id="mobile-app-layer">
 /* ═════ MOBILE / APP-LIKE LAYER ═════ */
@@ -1631,114 +1675,52 @@ button,[onclick],.tab-btn,.filter-btn,.editor-card,select,label{touch-action:man
       </div>
     </div>
 
-    <!-- Two Column Layout -->
-    <div class="tt-columns">
-
-      <!-- UK ACCOUNTS -->
-      <div class="tt-panel">
-        <div class="tt-panel-header">
-          <div class="tt-panel-meta">
-            <div class="tt-panel-icon uk">🇬🇧</div>
-            <div>
-              <div class="tt-panel-name">UK Accounts</div>
-              <div class="tt-panel-count" id="tt-uk-count2">0 accounts</div>
-            </div>
-          </div>
-          <button class="tt-add-acc-btn uk" onclick="toggleAddForm('uk')">＋ Add Account</button>
-        </div>
-
-        <!-- Add Form - UK -->
-        <div class="tt-add-form" id="tt-add-form-uk">
-          <div class="tt-add-form-title">🇬🇧 New UK Account</div>
-          <div class="tt-form-grid">
-            <div class="tt-form-field">
-              <div class="tt-form-label">TIKTOK USERNAME</div>
-              <input class="tt-form-input" id="tt-uk-name" placeholder="@username"/>
-            </div>
-            <div class="tt-form-field">
-              <div class="tt-form-label">EMAIL ADDRESS</div>
-              <input class="tt-form-input" id="tt-uk-email" placeholder="email@example.com"/>
-            </div>
-          </div>
-          <div class="tt-form-grid">
-            <div class="tt-form-field">
-              <div class="tt-form-label">FOLLOWERS COUNT</div>
-              <input class="tt-form-input" id="tt-uk-followers" placeholder="e.g. 125000" type="number" min="0"/>
-            </div>
-            <div class="tt-form-field" style="justify-content:flex-end">
-              <div class="tt-form-toggle-row">
-                <span class="tt-form-toggle-label">Monetized?</span>
-                <label class="tt-toggle">
-                  <input type="checkbox" id="tt-uk-mon"/>
-                  <span class="tt-toggle-slider"></span>
-                </label>
-              </div>
-            </div>
-          </div>
-          <div class="tt-form-btns">
-            <button class="tt-form-submit uk" onclick="addTTAccount('uk')">Add Account</button>
-            <button class="tt-form-cancel" onclick="toggleAddForm('uk')">Cancel</button>
-          </div>
-        </div>
-
-        <div class="tt-panel-body">
-          <div id="tt-uk-list"></div>
-        </div>
+    <!-- ═══ TikTok Accounts: Monetized / Unmonetized ═══ -->
+    <div class="ttx-bar">
+      <div class="ttx-chips" id="ttx-chips">
+        <button class="ttx-chip on" data-r="all" onclick="ttxRegion('all')">🌍 All</button>
+        <button class="ttx-chip" data-r="uk" onclick="ttxRegion('uk')">🇬🇧 UK <b id="ttx-c-uk">0</b></button>
+        <button class="ttx-chip" data-r="usa" onclick="ttxRegion('usa')">🇺🇸 USA <b id="ttx-c-usa">0</b></button>
       </div>
-
-      <!-- USA ACCOUNTS -->
-      <div class="tt-panel">
-        <div class="tt-panel-header">
-          <div class="tt-panel-meta">
-            <div class="tt-panel-icon usa">🇺🇸</div>
-            <div>
-              <div class="tt-panel-name">USA Accounts</div>
-              <div class="tt-panel-count" id="tt-usa-count2">0 accounts</div>
-            </div>
-          </div>
-          <button class="tt-add-acc-btn usa" onclick="toggleAddForm('usa')">＋ Add Account</button>
-        </div>
-
-        <!-- Add Form - USA -->
-        <div class="tt-add-form" id="tt-add-form-usa">
-          <div class="tt-add-form-title">🇺🇸 New USA Account</div>
-          <div class="tt-form-grid">
-            <div class="tt-form-field">
-              <div class="tt-form-label">TIKTOK USERNAME</div>
-              <input class="tt-form-input" id="tt-usa-name" placeholder="@username"/>
-            </div>
-            <div class="tt-form-field">
-              <div class="tt-form-label">EMAIL ADDRESS</div>
-              <input class="tt-form-input" id="tt-usa-email" placeholder="email@example.com"/>
-            </div>
-          </div>
-          <div class="tt-form-grid">
-            <div class="tt-form-field">
-              <div class="tt-form-label">FOLLOWERS COUNT</div>
-              <input class="tt-form-input" id="tt-usa-followers" placeholder="e.g. 250000" type="number" min="0"/>
-            </div>
-            <div class="tt-form-field" style="justify-content:flex-end">
-              <div class="tt-form-toggle-row">
-                <span class="tt-form-toggle-label">Monetized?</span>
-                <label class="tt-toggle">
-                  <input type="checkbox" id="tt-usa-mon"/>
-                  <span class="tt-toggle-slider"></span>
-                </label>
-              </div>
-            </div>
-          </div>
-          <div class="tt-form-btns">
-            <button class="tt-form-submit usa" onclick="addTTAccount('usa')">Add Account</button>
-            <button class="tt-form-cancel" onclick="toggleAddForm('usa')">Cancel</button>
-          </div>
-        </div>
-
-        <div class="tt-panel-body">
-          <div id="tt-usa-list"></div>
-        </div>
-      </div>
-
+      <input class="ttx-search" id="ttx-q" placeholder="🔍 Search @username / email" oninput="ttxSearch(this.value)"/>
+      <button class="ttx-add-btn" onclick="ttxToggleForm()">＋ Add Account</button>
     </div>
+
+    <div class="ttx-form" id="ttx-form">
+      <div class="ttx-form-title">➕ New TikTok Account</div>
+      <div class="ttx-form-grid">
+        <label class="ttx-f"><span>REGION</span>
+          <select id="ttx-n-region" class="tt-form-input"><option value="uk">🇬🇧 UK</option><option value="usa">🇺🇸 USA</option></select></label>
+        <label class="ttx-f"><span>TIKTOK USERNAME</span><input id="ttx-n-name" class="tt-form-input" placeholder="@username"/></label>
+        <label class="ttx-f"><span>EMAIL</span><input id="ttx-n-email" class="tt-form-input" placeholder="email@example.com"/></label>
+        <label class="ttx-f"><span>FOLLOWERS</span><input id="ttx-n-fol" class="tt-form-input" type="number" min="0" placeholder="e.g. 4500"/></label>
+        <label class="ttx-f"><span>VIEWS (LAST 30 DAYS)</span><input id="ttx-n-views" class="tt-form-input" type="number" min="0" placeholder="e.g. 60000"/></label>
+        <label class="ttx-f ttx-f-row"><span>MONETIZED?</span>
+          <label class="tt-toggle"><input type="checkbox" id="ttx-n-mon"/><span class="tt-toggle-slider"></span></label></label>
+      </div>
+      <div class="tt-form-btns">
+        <button class="tt-form-submit uk" onclick="ttxAdd()">Add Account</button>
+        <button class="tt-form-cancel" onclick="ttxToggleForm(false)">Cancel</button>
+      </div>
+    </div>
+
+    <section class="ttx-sec mon">
+      <div class="ttx-sec-head">
+        <div class="ttx-sec-ic">💰</div>
+        <div><div class="ttx-sec-t">Monetized Accounts</div><div class="ttx-sec-s">Creator Rewards ON — earning accounts</div></div>
+        <div class="ttx-sec-n" id="ttx-cnt-mon">0</div>
+      </div>
+      <div id="ttx-list-mon"></div>
+    </section>
+
+    <section class="ttx-sec unmon">
+      <div class="ttx-sec-head">
+        <div class="ttx-sec-ic">⏳</div>
+        <div><div class="ttx-sec-t">Unmonetized — Criteria Pending</div><div class="ttx-sec-s">10K followers + 100K views (30 din) poore hone baqi</div></div>
+        <div class="ttx-sec-n" id="ttx-cnt-unmon">0</div>
+      </div>
+      <div id="ttx-list-unmon"></div>
+    </section>
   </div>
 </div>
 
@@ -2260,9 +2242,26 @@ window.addEventListener('pagehide',flushAllSaves);
 document.addEventListener('visibilitychange',()=>{ if(document.visibilityState==='hidden')flushAllSaves(); });
 window.addEventListener('beforeunload',e=>{ flushAllSaves(); if((window._pendingWrites||0)>0){ e.preventDefault(); e.returnValue='Data abhi save ho raha hai — 1 second ruko'; return e.returnValue; } });
 
+// ── FAST START: pichli baar ka data is device par save hai — login screen foran khulti hai,
+//    asal (live) data peeche se aata hai. Login sirf live data aane ke baad hota hai (taake purana data save na ho).
+const J2A_CACHE='j2a_cache_v1';
+window._liveReady=false;
+let _cacheT=0;
+function j2aCacheSave(){ clearTimeout(_cacheT); _cacheT=setTimeout(()=>{ try{ if(!window._liveReady||!db)return;
+  localStorage.setItem(J2A_CACHE,JSON.stringify({t:Date.now(),editors:editorsArrayToObj(db.editors),trainings:db.trainings||[],finance:db.finance||null})); }catch(e){ try{localStorage.removeItem(J2A_CACHE);}catch(_){} } },4000); }
+(function(){ try{
+  const c=JSON.parse(localStorage.getItem(J2A_CACHE)||'null'); if(!c||!c.editors)return;
+  db={ editors:editorsObjToArray(c.editors), trainings:c.trainings||[], finance:c.finance||null };
+  db.editors.forEach(_fixEd); window._fromCache=true;
+  document.getElementById('fb-loading').style.display='none';
+  document.getElementById('login-screen').style.display='flex';
+  try{ loginInit(); }catch(e){}
+}catch(e){ db=null; } })();
+
 // ── Load data from Firebase, then start the app ─────────────────────────
 fbAuthReady.then(()=>dbRef.once('value')).then(snap=>{
   const remote = snap.val();
+  const _wasCache=!!window._fromCache; window._fromCache=false;
   if(remote){
     db = { editors: editorsObjToArray(remote.editors), trainings: remote.trainings||[], finance: remote.finance||null };
     _srvInit(remote.editors);
@@ -2277,10 +2276,13 @@ fbAuthReady.then(()=>dbRef.once('value')).then(snap=>{
   _lastTrainingsCount=(db.trainings||[]).length;
   ensureFinanceShape();
   if(!remote || !remote.finance) dbRef.child('finance').set(db.finance); // seed finance node if it never existed
+  window._liveReady=true; j2aCacheSave();
   document.getElementById('fb-loading').style.display='none';
-  document.getElementById('login-screen').style.display='flex';
-  try{ loginInit(); }catch(e){}
+  if(!_wasCache){ document.getElementById('login-screen').style.display='flex'; try{ loginInit(); }catch(e){} }
+  else if(currentUser){ try{ _liveRefresh(); renderStats(); }catch(e){} }
+  if(typeof window._loginWait==='function'){ const f=window._loginWait; window._loginWait=null; f(); }
 }).catch(err=>{
+  if(window._fromCache||(db&&!window._liveReady&&document.getElementById('login-screen').style.display==='flex')){ showErr('⚠️ Internet slow / band hai — data sync nahi hua. Page refresh karo.'); return; }
   console.error('Firebase load error:', err);
   const code=String((err&&err.code)||''), msg=String((err&&err.message)||'');
   const authIssue=code.startsWith('auth/')||/permission_denied/i.test(code+msg);
@@ -2328,6 +2330,7 @@ document.addEventListener('focusout',()=>{ if(_modalPending)setTimeout(_modalLiv
 document.addEventListener('pointerup',()=>{ if(_modalPending)setTimeout(_modalLive,150); },true);
 
 function _edChanged(id,removed){
+  j2aCacheSave();
   if(!currentUser)return;
   try{ if(currentUser.role==='admin'&&typeof capStripSync==='function')capStripSync(); }catch(e){}
   if(getComputedStyle(document.getElementById('app')).display!=='none'){
@@ -2509,11 +2512,15 @@ fbAuthReady.then(_startLiveSync).catch(()=>{});
 
 // Mobile par tab background mein jaane se connection so jata hai — wapas aate hi foran taaza data
 (function(){
-  let last=0;
-  function resync(){
+  let last=0, hidAt=0;
+  document.addEventListener('visibilitychange',()=>{ if(document.visibilityState==='hidden')hidAt=Date.now(); });
+  function resync(ev){
     if(db===null||!currentUser)return;
-    const now=Date.now(); if(now-last<2500)return; last=now;
     try{ fbDb.goOnline(); }catch(e){}
+    // Live listeners khud missed changes le aate hain. Poora editors data sirf tab dobara padho jab app 60 sec+ background mein rahi ho / internet wapas aaya ho
+    const long=(ev&&ev.type==='online')||(hidAt&&Date.now()-hidAt>60000);
+    if(!long)return; hidAt=0;
+    const now=Date.now(); if(now-last<10000)return; last=now;
     dbRef.child('editors').once('value').then(sn=>{
       const raw=sn.val(); if(!raw)return;
       if(Array.isArray(raw)) raw.forEach((e,i)=>{ if(e)_edApply(String(i),e,false); });
@@ -2628,6 +2635,7 @@ function editorIdLookup(){
 }
 
 function doLogin(){
+  if(!window._liveReady){ showErr('⏳ Live data sync ho raha hai… login khud ho jayega'); window._loginWait=()=>{ clearErr(); doLogin(); }; return; }
   const pin=document.getElementById('pin-input').value.trim();
   if(loginRole==='admin'){
     const realAdminPin=(db.finance&&db.finance.adminPin)||ADMIN_PIN;
@@ -6304,7 +6312,7 @@ function toggleTTMonetized(owner, id){
   acc.monetized = !acc.monetized;
   ttSave();
   ttRenderAll();
-  showToast(acc.monetized ? `✅ ${acc.name} monetized` : `⏳ ${acc.name} unmonetized`);
+  showToast(acc.monetized ? `💰 ${acc.name} → Monetized list` : `⏳ ${acc.name} → Unmonetized list`);
 }
 
 function deleteTTAccount(owner, id){
@@ -6318,91 +6326,102 @@ function deleteTTAccount(owner, id){
   showToast('Account delete ho gaya');
 }
 
+// ── TikTok v2: Monetized aur Unmonetized alag sections, region (UK/USA) filter, criteria progress ──
+const TT_CRIT={followers:10000,views:100000};   // TikTok Creator Rewards: 10K followers + 100K views (last 30 days)
+let ttxReg='all', ttxQ='';
+function ttxEsc(x){return String(x==null?'':x).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function ttxRegion(r){ttxReg=r;document.querySelectorAll('#ttx-chips .ttx-chip').forEach(b=>b.classList.toggle('on',b.dataset.r===r));ttRenderAll();}
+function ttxSearch(q){ttxQ=String(q||'').trim().toLowerCase();clearTimeout(window._ttxQT);window._ttxQT=setTimeout(ttRenderAll,80);}
+function ttxToggleForm(show){const f=document.getElementById('ttx-form');if(!f)return;const on=show===undefined?!f.classList.contains('show'):!!show;f.classList.toggle('show',on);if(on){const r=document.getElementById('ttx-n-region');if(r&&ttxReg!=='all')r.value=ttxReg;setTimeout(()=>{const n=document.getElementById('ttx-n-name');if(n)n.focus();},30);}}
+function ttxAdd(){
+  const g=id=>document.getElementById(id);
+  const owner=g('ttx-n-region').value==='usa'?'usa':'uk';
+  const raw=g('ttx-n-name').value.trim(), email=g('ttx-n-email').value.trim();
+  if(!raw) return showToast('TikTok username daalo!','error');
+  if(!email) return showToast('Email daalo!','error');
+  const name=raw.startsWith('@')?raw:'@'+raw;
+  if([...(ttDb.uk||[]),...(ttDb.usa||[])].some(a=>String(a.name).toLowerCase()===name.toLowerCase())) return showToast(name+' pehle se list mein hai','error');
+  const acc={id:ttGenId(),name,email,monetized:g('ttx-n-mon').checked,followers:parseInt(g('ttx-n-fol').value)||0,views30:parseInt(g('ttx-n-views').value)||0,addedDate:new Date().toISOString().slice(0,10)};
+  (ttDb[owner]=ttDb[owner]||[]).push(acc); ttSave();
+  ['ttx-n-name','ttx-n-email','ttx-n-fol','ttx-n-views'].forEach(id=>g(id).value=''); g('ttx-n-mon').checked=false;
+  ttxToggleForm(false); ttRenderAll();
+  showToast(`✓ ${acc.name} ${acc.monetized?'Monetized':'Unmonetized'} list mein add ho gaya`);
+}
+function ttxSetNum(owner,id,field){
+  const acc=(ttDb[owner]||[]).find(a=>a.id===id); if(!acc)return;
+  const label=field==='views30'?'Last 30 din ke views':'Followers';
+  const v=prompt(label+' — '+acc.name,acc[field]||0); if(v===null)return;
+  const n=parseInt(String(v).replace(/[^\d]/g,''))||0; acc[field]=n;
+  if(field==='views30')acc.viewsAt=localYMD();
+  ttSave(); ttRenderAll(); showToast('✓ '+label+': '+ttFormatFollowers(n));
+}
+function ttxCrit(acc){
+  const f=acc.followers||0, v=acc.views30||0;
+  const fp=Math.min(100,Math.round(f/TT_CRIT.followers*100)), vp=Math.min(100,Math.round(v/TT_CRIT.views*100));
+  return {f,v,fp,vp,fOk:f>=TT_CRIT.followers,vOk:v>=TT_CRIT.views,ready:f>=TT_CRIT.followers&&v>=TT_CRIT.views,pct:Math.round((fp+vp)/2)};
+}
+function ttxCard(owner,acc){
+  const id=ttxEsc(acc.id), o=owner, nm=ttxEsc(acc.name), initials=ttxEsc(String(acc.name||'').replace('@','').slice(0,2).toUpperCase());
+  const reg=o==='uk'?'🇬🇧 UK':'🇺🇸 USA';
+  let crit='';
+  if(!acc.monetized){
+    const c=ttxCrit(acc);
+    crit=`<div class="ttx-crit">
+      <div class="ttx-crit-row"><span>${c.fOk?'✅':'👥'} Followers</span><div class="ttx-bar2"><i class="${c.fOk?'ok':''}" style="width:${c.fp}%"></i></div>
+        <span class="ttx-crit-v">${ttFormatFollowers(c.f)||'0'} / 10K <button class="tt-followers-edit-btn" onclick="ttxSetNum('${o}','${id}','followers')">Edit</button></span></div>
+      <div class="ttx-crit-row"><span>${c.vOk?'✅':'👁️'} Views 30d</span><div class="ttx-bar2"><i class="${c.vOk?'ok':''}" style="width:${c.vp}%"></i></div>
+        <span class="ttx-crit-v">${c.v?ttFormatFollowers(c.v):'0'} / 100K <button class="tt-followers-edit-btn" onclick="ttxSetNum('${o}','${id}','views30')">Edit</button></span></div>
+      ${c.ready?`<div class="ttx-ready">🎉 Criteria complete — apply kar do <button onclick="toggleTTMonetized('${o}','${id}')">✓ Monetized</button></div>`
+               :`<div style="font-size:10px;color:var(--text5);font-weight:700">Progress ${c.pct}%${acc.viewsAt?' · views update '+ttxEsc(acc.viewsAt):''}</div>`}
+    </div>`;
+  }
+  return `<div class="tt-acc-card ${acc.monetized?'monetized-card':'unmonetized-card'}" style="${acc.paused?'opacity:.6;filter:grayscale(.45)':''}">
+    <div class="tt-acc-card-top">
+      <div class="tt-acc-card-info">
+        <div class="tt-acc-avatar ${o}">${initials}</div>
+        <div class="tt-acc-text">
+          <div class="tt-acc-handle">${nm}<span class="ttx-reg">${reg}</span>${acc.paused?' <span style="font-size:10px;font-weight:800;color:var(--amber);background:#f59e0b22;border-radius:999px;padding:2px 8px;margin-left:4px">⏸ Pending</span>':''}</div>
+          <div class="tt-acc-mail">${ttxEsc(acc.email)}${acc.paused&&acc.pausedNote?' · '+ttxEsc(acc.pausedNote):''}</div>
+        </div>
+      </div>
+      <div class="tt-acc-right"><button class="tt-del-btn" onclick="deleteTTAccount('${o}','${id}')" title="Delete">✕</button></div>
+    </div>
+    ${acc.monetized?`<div class="tt-followers-row"><span class="tt-followers-icon">👥</span><span class="tt-followers-label">FOLLOWERS</span>
+      <span class="tt-followers-val big">${ttFormatFollowers(acc.followers||0)}</span>
+      <button class="tt-followers-edit-btn" onclick="ttxSetNum('${o}','${id}','followers')">Edit</button></div>`:''}
+    ${crit}
+    <div class="tt-acc-card-bottom" style="margin-top:10px">
+      <div class="tt-acc-date">Added ${ttxEsc(acc.addedDate||'—')} <button onclick="ttTogglePause('${o}','${id}')" style="margin-left:8px;border:1px solid ${acc.paused?'#22c55e66':'#f59e0b66'};background:${acc.paused?'#22c55e22':'#f59e0b22'};color:${acc.paused?'var(--green)':'var(--amber)'};border-radius:8px;padding:3px 9px;font-size:11px;font-weight:800;cursor:pointer;font-family:inherit">${acc.paused?'▶ Chalu':'⏸ Pending'}</button></div>
+      <div class="tt-toggle-wrap"><span class="tt-toggle-label" style="color:${acc.monetized?'#22c55e':'var(--text5)'}">${acc.monetized?'MONETIZED':'OFF'}</span>
+        <label class="tt-toggle"><input type="checkbox" ${acc.monetized?'checked':''} onchange="toggleTTMonetized('${o}','${id}')"/><span class="tt-toggle-slider"></span></label></div>
+    </div>
+  </div>`;
+}
+function ttxSection(mon){
+  const regs=ttxReg==='all'?['uk','usa']:[ttxReg];
+  const pick=o=>(ttDb[o]||[]).filter(a=>a&&!!a.monetized===mon&&(!ttxQ||String(a.name).toLowerCase().includes(ttxQ)||String(a.email||'').toLowerCase().includes(ttxQ)))
+    .sort((a,b)=>(!!a.paused-!!b.paused)||(mon?(b.followers||0)-(a.followers||0):ttxCrit(b).pct-ttxCrit(a).pct));
+  let n=0,html='';
+  regs.forEach(o=>{const l=pick(o);n+=l.length;if(!l.length)return;
+    if(regs.length>1)html+=`<div class="ttx-grp">${o==='uk'?'🇬🇧 UK':'🇺🇸 USA'} · ${l.length}</div>`;
+    html+=`<div class="ttx-grid">${l.map(a=>ttxCard(o,a)).join('')}</div>`;});
+  if(!n)html=`<div class="ttx-empty">${ttxQ?'Koi account match nahi hua':(mon?'Abhi koi monetized account nahi':'Sab accounts monetized hain 🎉')}</div>`;
+  return {n,html};
+}
 function ttRenderAll(){
-  const allAccs  = [...(ttDb.uk||[]), ...(ttDb.usa||[])];
-  const monCount = allAccs.filter(a=>a.monetized).length;
-  const totalFollowers = allAccs.reduce((s,a)=>s+(a.followers||0),0);
-  document.getElementById('tt-total').textContent       = allAccs.length;
-  document.getElementById('tt-mon-count').textContent   = monCount;
-  document.getElementById('tt-unmon-count').textContent = allAccs.length - monCount;
-  try{const pn=allAccs.filter(a=>a.paused).length;const el=document.getElementById('tt-total');if(el)el.title=pn?pn+' account Pending hain':'';}catch(e){}
-  const tfEl = document.getElementById('tt-total-followers');
-  if(tfEl) tfEl.textContent = ttFormatFollowers(totalFollowers);
-  ttRenderList('uk');
-  ttRenderList('usa');
-  // Update analytics bar
+  const allAccs=[...(ttDb.uk||[]),...(ttDb.usa||[])].filter(Boolean);
+  const monCount=allAccs.filter(a=>a.monetized).length;
+  const set=(id,v)=>{const e=document.getElementById(id);if(e)e.textContent=v;};
+  set('tt-total',allAccs.length); set('tt-mon-count',monCount); set('tt-unmon-count',allAccs.length-monCount);
+  set('tt-total-followers',ttFormatFollowers(allAccs.reduce((s,a)=>s+(a.followers||0),0)));
+  set('ttx-c-uk',(ttDb.uk||[]).length); set('ttx-c-usa',(ttDb.usa||[]).length);
+  const m=ttxSection(true),u=ttxSection(false);
+  set("ttx-cnt-mon",m.n); set("ttx-cnt-unmon",u.n);
+  const lm=document.getElementById('ttx-list-mon'),lu=document.getElementById('ttx-list-unmon');
+  if(lm)lm.innerHTML=m.html; if(lu)lu.innerHTML=u.html;
   if(typeof ttRenderAnalytics==='function') ttRenderAnalytics();
 }
-
-function ttRenderList(owner){
-  const list  = document.getElementById('tt-'+owner+'-list');
-  const count = document.getElementById('tt-'+owner+'-count');
-  const accs  = ttDb[owner] || [];
-  const isUK  = owner === 'uk';
-
-  count.textContent = accs.length === 1 ? '1 account' : accs.length+' accounts';
-
-  if(!accs.length){
-    list.innerHTML = `
-      <div class="tt-empty">
-        <div class="tt-empty-icon">${isUK ? '🇬🇧' : '🇺🇸'}</div>
-        <div class="tt-empty-text">No accounts yet — click "+ Add Account"</div>
-      </div>`;
-    return;
-  }
-
-  list.innerHTML = accs.map(acc => {
-    const initials = acc.name.replace('@','').slice(0,2).toUpperCase();
-    const monClass = acc.monetized ? 'monetized-card' : 'unmonetized-card';
-    const fmtF = ttFormatFollowers(acc.followers||0);
-    return `
-    <div class="tt-acc-card ${monClass}" style="${acc.paused?'opacity:.6;filter:grayscale(.45)':''}">
-      <div class="tt-acc-card-top">
-        <div class="tt-acc-card-info">
-          <div class="tt-acc-avatar ${owner}">${initials}</div>
-          <div class="tt-acc-text">
-            <div class="tt-acc-handle">${acc.name}${acc.paused?' <span style="font-size:10px;font-weight:800;color:var(--amber);background:#f59e0b22;border-radius:999px;padding:2px 8px;margin-left:6px">⏸ Pending</span>':''}</div>
-            <div class="tt-acc-mail">${acc.email}</div>
-          </div>
-        </div>
-        <div class="tt-acc-right">
-          <span class="tt-mon-badge ${acc.monetized?'yes':'no'}">
-            <span class="tt-mon-dot ${acc.monetized?'yes':'no'}"></span>
-            ${acc.monetized ? 'Monetized' : 'Unmonetized'}
-          </span>
-          <button class="tt-del-btn" onclick="deleteTTAccount('${owner}','${acc.id}')" title="Delete">✕</button>
-        </div>
-      </div>
-
-      <!-- Followers Row -->
-      <div class="tt-followers-row">
-        <span class="tt-followers-icon">👥</span>
-        <span class="tt-followers-label">FOLLOWERS</span>
-        <span class="tt-followers-val big">${fmtF}</span>
-        <button class="tt-followers-edit-btn" onclick="showFollowersEdit('${owner}','${acc.id}')">Edit</button>
-      </div>
-      <div class="tt-followers-input-wrap" id="tt-fedit-${acc.id}" style="display:none">
-        <input class="tt-followers-inline-input" id="tt-finput-${acc.id}" type="number" min="0"
-          value="${acc.followers||0}" placeholder="Followers number likho"/>
-        <button class="tt-followers-save-btn ${owner}" onclick="saveFollowers('${owner}','${acc.id}')">Save</button>
-      </div>
-
-      <div class="tt-acc-card-bottom" style="margin-top:10px">
-        <div class="tt-acc-date">Added ${acc.addedDate||'—'} <button onclick="ttTogglePause('${owner}','${acc.id}')" title="${acc.paused?'Dobara working':'Abhi working nahi — Pending'}" style="margin-left:8px;border:1px solid ${acc.paused?'#22c55e66':'#f59e0b66'};background:${acc.paused?'#22c55e22':'#f59e0b22'};color:${acc.paused?'var(--green)':'var(--amber)'};border-radius:8px;padding:3px 9px;font-size:11px;font-weight:800;cursor:pointer;font-family:inherit">${acc.paused?'▶ Chalu':'⏸ Pending'}</button></div>
-        <div class="tt-toggle-wrap">
-          <span class="tt-toggle-label" style="color:${acc.monetized?'#22c55e':'var(--text5)'}">
-            ${acc.monetized ? 'ON' : 'OFF'}
-          </span>
-          <label class="tt-toggle">
-            <input type="checkbox" ${acc.monetized?'checked':''}
-              onchange="toggleTTMonetized('${owner}','${acc.id}')"/>
-            <span class="tt-toggle-slider"></span>
-          </label>
-        </div>
-      </div>
-    </div>`;
-  }).join('');
-}
+function ttRenderList(){ ttRenderAll(); }
 
 // ════════════════════════════════════════════════════
 // TOAST
@@ -12521,6 +12540,184 @@ if(typeof _clr==='function')window.capStripClear=function(){try{_clr.apply(this,
 try{const _lo=window.doLogout;if(typeof _lo==='function')window.doLogout=function(){try{stop();}catch(e){}return _lo.apply(this,arguments);};}catch(e){}
 try{const _sa=window.showApp;if(typeof _sa==='function')window.showApp=function(){const r=_sa.apply(this,arguments);try{start();}catch(e){}return r;};}catch(e){}
 setInterval(()=>{try{if(typeof currentUser!=='undefined'&&currentUser){start();render(false);}}catch(e){}},3000);
+})();
+</script>
+
+<style>
+/* ═══ 🖼️ PIC CARD — Caption card se bilkul alag (apna button, apna panel, apna data) ═══ */
+.pk-pill{position:fixed;right:14px;bottom:calc(76px + env(safe-area-inset-bottom,0px));z-index:10004;display:none;align-items:center;gap:8px;border:none;cursor:pointer;font-family:inherit;font-size:13px;font-weight:800;color:#fff;background:linear-gradient(135deg,#06b6d4,#3b82f6);padding:12px 16px;border-radius:999px;box-shadow:0 8px 28px #3b82f666,0 2px 8px #0008}
+.pk-pill.on{display:flex}
+.pk-pill b{background:#ffffff33;border-radius:999px;padding:1px 8px}
+.pk-bg{position:fixed;inset:0;z-index:10006;background:#000a;display:none}
+.pk-bg.on{display:block}
+.pk-sheet{position:fixed;left:0;right:0;bottom:0;z-index:10007;display:none;flex-direction:column;background:var(--surface);color:var(--text);border:1px solid #3b82f666;border-bottom:none;border-radius:18px 18px 0 0;max-height:88vh;max-height:88dvh;box-shadow:0 -14px 50px #000a;padding-bottom:env(safe-area-inset-bottom,0px)}
+.pk-sheet.on{display:flex}
+.pk-grab{width:42px;height:4px;border-radius:4px;background:var(--border2);margin:8px auto 0;flex:none}
+.pk-hd{display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:1px solid var(--border);flex:none;flex-wrap:wrap}
+.pk-hd .t{flex:1 1 150px;min-width:0}.pk-hd .t b{display:block;font-size:15px}.pk-hd .t small{font-size:11.5px;color:var(--text4)}
+.pk-add{background:linear-gradient(135deg,#06b6d4,#3b82f6);border:none;color:#fff;border-radius:999px;height:36px;padding:0 14px;font-size:12.5px;font-weight:800;cursor:pointer;font-family:inherit;white-space:nowrap}
+.pk-min{background:var(--surface3);border:1px solid var(--border2);color:var(--text2);border-radius:9px;height:36px;padding:0 12px;font-size:12px;font-weight:700;cursor:pointer;font-family:inherit}
+.pk-list{overflow-y:auto;padding:12px 14px 16px;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+.pk-card{background:var(--surface2);border:1px solid var(--border2);border-left:4px solid #3b82f6;border-radius:12px;padding:12px;margin-bottom:12px}
+.pk-top{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text3)}.pk-top span{flex:1;min-width:0}
+.pk-x{background:none;border:1px solid var(--border2);color:var(--text3);border-radius:8px;width:30px;height:30px;cursor:pointer;font-size:13px}
+.pk-imgs{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:10px 0}
+.pk-imgs img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:8px;background:var(--surface3);display:block}
+.pk-imgs.one{grid-template-columns:1fr}.pk-imgs.one img{aspect-ratio:auto;max-height:44vh;object-fit:contain}
+.pk-load{padding:26px 10px;text-align:center;color:var(--text4);font-size:12.5px;background:var(--surface3);border-radius:8px;margin:10px 0}
+.pk-btns{display:flex;gap:6px;flex-wrap:wrap}
+.pk-b{flex:1 1 96px;border:none;border-radius:10px;padding:12px 10px;font-weight:800;font-size:13.5px;cursor:pointer;font-family:inherit}
+.pk-b.sh{background:linear-gradient(135deg,#06b6d4,#3b82f6);color:#fff}
+.pk-b.sv{background:linear-gradient(135deg,#22c55e,#16a34a);color:#04210f}
+.pk-b.cp{background:var(--surface3);color:var(--text);border:1px solid var(--border2)}
+.pk-hint{font-size:11.5px;color:var(--text4);margin-top:8px;line-height:1.5}
+.pk-empty{border:2px dashed var(--border2);border-radius:14px;padding:26px 14px;text-align:center;color:var(--text3);font-size:13px;line-height:1.8;cursor:pointer}
+.pk-busy{padding:14px;text-align:center;color:#3b82f6;font-weight:800;font-size:13px}
+.pk-undo{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(150px + env(safe-area-inset-bottom,0px));z-index:10012;background:#0f172a;color:#fff;border:1px solid #334155;border-radius:999px;padding:9px 10px 9px 16px;display:flex;gap:10px;align-items:center;font-size:13px;font-weight:700;box-shadow:0 10px 34px #000b;white-space:nowrap;max-width:94vw}
+.pk-undo button{background:#3b82f6;color:#fff;border:none;border-radius:999px;padding:7px 13px;font-weight:800;cursor:pointer;font-family:inherit}
+@media(min-width:701px){.pk-pill{right:24px;bottom:86px}.pk-sheet{left:auto;right:24px;bottom:24px;width:440px;max-height:82vh;border-radius:16px;border:1px solid #3b82f666;padding-bottom:0}.pk-grab{display:none}.pk-bg{background:#0005}}
+</style>
+<script>
+// ════════════════════════════════════════════════════════════════════
+// 🖼️ PIC CARD — Caption card ke saath ek ALAG button. Caption card ka code / data bilkul nahi chhua.
+// Flow: 🖼️ Pic card → ＋ Pic daalo (gallery / camera / PC; Ctrl+V paste ya drag bhi) → card ban jata hai
+//       → mobile par 📤 Share (seedha TikTok / WhatsApp / Gallery) · ⬇️ Save · 📋 Copy
+//       → kaam hote hi card KHUD khatam (6 sec "↩ Wapas" ka mauqa, phir Firebase se bhi poori tarah delete).
+// Data: piccards/{owner}/{id} (chhota hisaab, realtime) + picimgs/{owner}/{id} (tasveerein — sirf panel khulne par load).
+// owner = editorId ya "admin" (caption card jaisa). Admin ko sab ke cards dikhte hain.
+// ════════════════════════════════════════════════════════════════════
+(function(){
+const X=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const toast=(m,t)=>{try{showToast(m,t);}catch(e){}};
+const user=()=>{try{return (typeof currentUser!=='undefined'&&currentUser)||null;}catch(e){return null;}};
+const isAdm=()=>{const u=user();return !!u&&u.role==='admin';};
+const owner=()=>isAdm()?'admin':user().editorId;
+const MAXN=10,UNDO_MS=6000;
+let meta={},imgs={},offs=[],mode=null,isOpen=false,pend={},busyAdd=false,undoK=null;
+const $=id=>document.getElementById(id);
+
+function ui(){
+  if($('pk-pill'))return;
+  const p=document.createElement('button');p.id='pk-pill';p.className='pk-pill';p.type='button';p.onclick=()=>pkOpen();document.body.appendChild(p);
+  const bg=document.createElement('div');bg.id='pk-bg';bg.className='pk-bg';bg.onclick=()=>pkMin();document.body.appendChild(bg);
+  const s=document.createElement('div');s.id='pk-sheet';s.className='pk-sheet';
+  s.innerHTML=`<div class="pk-grab"></div><div class="pk-hd"><div class="t"><b>🖼️ Pic cards</b><small>Pic daalo → mobile par Share / Save / Copy → card khud khatam</small></div>
+    <button class="pk-add" type="button" onclick="pkPick()">＋ Pic daalo</button><button class="pk-min" type="button" onclick="pkMin()">Minimize ▾</button></div>
+    <div class="pk-list" id="pk-list"></div><input type="file" id="pk-file" accept="image/*" multiple style="display:none"/>`;
+  document.body.appendChild(s);
+  $('pk-file').addEventListener('change',e=>{const f=[...(e.target.files||[])];e.target.value='';if(f.length)addFiles(f);});
+  // PC: Ctrl+V se pic paste, ya panel par drag-drop
+  document.addEventListener('paste',e=>{if(!isOpen)return;const f=[...((e.clipboardData&&e.clipboardData.files)||[])].filter(x=>/^image\//.test(x.type));if(f.length){e.preventDefault();addFiles(f);}});
+  s.addEventListener('dragover',e=>{e.preventDefault();});
+  s.addEventListener('drop',e=>{e.preventDefault();const f=[...((e.dataTransfer&&e.dataTransfer.files)||[])].filter(x=>/^image\//.test(x.type));if(f.length)addFiles(f);});
+  // Caption card ka panel khula ho to Pic button chhupa do (takraaye nahi) — caption card ko chhuye baghair, sirf dekh kar
+  try{const cd=$('cap-dock');if(cd)new MutationObserver(pill).observe(cd,{attributes:true,attributeFilter:['class']});}catch(e){}
+}
+function stop(){offs.forEach(f=>{try{f();}catch(e){}});offs=[];meta={};imgs={};mode=null;}
+function start(){
+  const u=user();
+  if(!u){if(mode){stop();}pkMin(true);pill();return;}
+  ui();
+  const want=isAdm()?'admin':'ed:'+u.editorId;if(mode===want)return;stop();mode=want;
+  const ref=fbDb.ref(isAdm()?'piccards':'piccards/'+u.editorId);
+  const h=ref.on('value',sn=>{const v=sn.val()||{};meta={};
+    if(isAdm())Object.keys(v).forEach(o=>Object.keys(v[o]||{}).forEach(id=>{const c=v[o][id];if(c&&typeof c==='object')meta[o+'/'+id]=Object.assign({_o:o,id},c);}));
+    else Object.keys(v).forEach(id=>{const c=v[id];if(c&&typeof c==='object')meta[u.editorId+'/'+id]=Object.assign({_o:u.editorId,id},c);});
+    Object.keys(imgs).forEach(k=>{if(!meta[k])delete imgs[k];});
+    render();},e=>console.warn('pic listen',e&&e.message));
+  offs.push(()=>ref.off('value',h));
+  render();
+}
+const list=()=>Object.keys(meta).filter(k=>!pend[k]).map(k=>meta[k]).sort((a,b)=>(b.at||0)-(a.at||0));
+function pill(){const p=$('pk-pill');if(!p)return;const u=user(),cd=$('cap-dock'),capOpen=!!(cd&&cd.classList.contains('open'));
+  const n=list().length;p.innerHTML=`🖼️ Pic card <b>${n}</b>`;p.classList.toggle('on',!!u&&!isOpen&&!capOpen);}
+function loadImg(k){
+  if(imgs[k]!==undefined)return;imgs[k]=null;const c=meta[k];if(!c)return;
+  fbDb.ref('picimgs/'+c._o+'/'+c.id).once('value').then(sn=>{const v=sn.val();imgs[k]=Array.isArray(v)?v.filter(Boolean):(v?Object.values(v).filter(Boolean):[]);render();}).catch(()=>{delete imgs[k];});
+}
+const tm=ms=>{if(!ms)return '';const d=new Date(ms),t=new Date();return (d.toDateString()===t.toDateString()?'Aaj ':d.toLocaleDateString('en-GB',{day:'numeric',month:'short'})+' · ')+d.toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});};
+const canShare=()=>{try{return !!(navigator.share&&navigator.canShare&&navigator.canShare({files:[new File([new Blob(['x'],{type:'image/jpeg'})],'t.jpg',{type:'image/jpeg'})]}));}catch(e){return false;}};
+const canCopy=()=>!!(navigator.clipboard&&navigator.clipboard.write&&window.ClipboardItem);
+function cardHTML(c){
+  const k=c._o+'/'+c.id,K=X(k),im=imgs[k],n=+c.n||(im?im.length:0);
+  const who=isAdm()?(c._o==='admin'?'👑 Admin':'👤 '+X(c.edName||c._o))+' · ':'';
+  const pics=im?`<div class="pk-imgs ${im.length===1?'one':''}">${im.map((src,i)=>`<img src="${src}" alt="Pic ${i+1}" loading="lazy"/>`).join('')}</div>`:`<div class="pk-load">⏳ ${n||''} pic load ho rahi hai…</div>`;
+  const sh=canShare(),cp=canCopy()&&n===1;
+  return `<div class="pk-card"><div class="pk-top"><span>${who}🖼️ ${n} pic${n===1?'':'s'} · ${X(tm(c.at))}</span><button class="pk-x" type="button" title="Card hata do" onclick="pkDel('${K}')">✕</button></div>${pics}
+    <div class="pk-btns">${sh?`<button class="pk-b sh" type="button" onclick="pkUse('${K}','share')" ${im?'':'disabled'}>📤 Share</button>`:''}<button class="pk-b sv" type="button" onclick="pkUse('${K}','save')" ${im?'':'disabled'}>⬇️ Save${n>1?' ('+n+')':''}</button>${cp?`<button class="pk-b cp" type="button" onclick="pkUse('${K}','copy')" ${im?'':'disabled'}>📋 Copy</button>`:''}</div>
+    <div class="pk-hint">${sh?'📤 Share se seedha TikTok / WhatsApp / Gallery mein bhejo. ':''}Kaam hote hi ye card khud khatam ho jayega.</div></div>`;
+}
+function render(){
+  pill();const L=$('pk-list');if(!L||!isOpen)return;const l=list();
+  l.forEach(c=>loadImg(c._o+'/'+c.id));
+  const sy=L.scrollTop;
+  L.innerHTML=(busyAdd?`<div class="pk-busy">⏳ Pic save ho rahi hai…</div>`:'')+(l.length?l.map(cardHTML).join(''):(busyAdd?'':`<div class="pk-empty" onclick="pkPick()">🖼️ Abhi koi pic card nahi.<br><b>＋ Pic daalo</b> dabao${window.matchMedia&&matchMedia('(min-width:701px)').matches?' — ya yahan pic drag karo / Ctrl+V se paste karo':''}.<br><small>Ek card mein ${MAXN} tak pics (TikTok photo post ke liye).</small></div>`));
+  L.scrollTop=sy;
+}
+window.pkOpen=function(){if(!user())return;start();isOpen=true;$('pk-bg').classList.add('on');$('pk-sheet').classList.add('on');render();};
+window.pkMin=function(silent){isOpen=false;const b=$('pk-bg'),s=$('pk-sheet');if(b)b.classList.remove('on');if(s)s.classList.remove('on');if(!silent)pill();};
+window.pkPick=function(){const f=$('pk-file');if(f)f.click();};
+
+// ── Pic chhoti karo (quality theek rakhte hue) taake realtime fast rahe ──
+function shrink(file,M,q){return new Promise((res,rej)=>{const url=URL.createObjectURL(file),i=new Image();
+  i.onload=()=>{try{let w=i.naturalWidth,h=i.naturalHeight;const s=Math.min(1,M/Math.max(w,h));w=Math.max(1,Math.round(w*s));h=Math.max(1,Math.round(h*s));
+    const c=document.createElement('canvas');c.width=w;c.height=h;const x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,w,h);x.drawImage(i,0,0,w,h);URL.revokeObjectURL(url);res(c.toDataURL('image/jpeg',q));}catch(e){rej(e);}};
+  i.onerror=()=>{URL.revokeObjectURL(url);rej(new Error('pic khul nahi saki'));};i.src=url;});}
+async function addFiles(files){
+  const u=user();if(!u||busyAdd)return;
+  files=files.filter(f=>/^image\//.test(f.type));if(!files.length)return toast('Sirf pic (image) daal sakte ho','error');
+  if(files.length>MAXN){toast(`Ek card mein ${MAXN} pics tak — pehli ${MAXN} li hain`,'error');files=files.slice(0,MAXN);}
+  busyAdd=true;render();
+  try{
+    let arr=[];for(const f of files)arr.push(await shrink(f,2048,0.9));
+    let tot=arr.reduce((s,d)=>s+d.length,0);
+    if(tot>8e6){arr=[];for(const f of files)arr.push(await shrink(f,1600,0.82));tot=arr.reduce((s,d)=>s+d.length,0);}
+    if(tot>9.5e6)throw new Error('Pics bohat bari hain — kam pics ek card mein daalo');
+    const o=owner(),id=fbDb.ref('piccards/'+o).push().key,ed=isAdm()?null:(typeof getEditor==='function'?getEditor(o):null);
+    const m={id,at:Date.now(),n:arr.length,by:isAdm()?'admin':'editor',edName:isAdm()?'Admin':(ed?ed.name:o)};
+    imgs[o+'/'+id]=arr;
+    await fbDb.ref().update({['picimgs/'+o+'/'+id]:arr,['piccards/'+o+'/'+id]:m});
+    const chk=(await fbDb.ref('piccards/'+o+'/'+id).once('value')).val();
+    if(!chk)throw new Error('save check fail');
+    toast(`🖼️ ${arr.length} pic${arr.length>1?'s':''} ka card ban gaya — mobile par khol kar Share / Save karo`);
+  }catch(e){console.warn('pic add',e);toast('⚠️ Pic save nahi hui: '+String(e&&e.message||e).slice(0,80),'error');}
+  busyAdd=false;render();
+}
+// ── Istemal: Share / Save / Copy → card khud khatam ──
+async function filesOf(k){const im=imgs[k]||[];return Promise.all(im.map(async(src,i)=>{const b=await (await fetch(src)).blob();return new File([b],`pic-${i+1}.jpg`,{type:'image/jpeg'});}));}
+function pngOf(src){return new Promise((res,rej)=>{const i=new Image();i.onload=()=>{const c=document.createElement('canvas');c.width=i.naturalWidth;c.height=i.naturalHeight;c.getContext('2d').drawImage(i,0,0);c.toBlob(b=>b?res(b):rej(new Error('png')),'image/png');};i.onerror=rej;i.src=src;});}
+window.pkUse=async function(k,kind){
+  const c=meta[k],im=imgs[k];if(!c||!im||!im.length||pend[k])return;
+  try{
+    if(kind==='share'){const fs=await filesOf(k);await navigator.share({files:fs});}
+    else if(kind==='save'){const fs=await filesOf(k);fs.forEach((f,i)=>setTimeout(()=>{const u=URL.createObjectURL(f),a=document.createElement('a');a.href=u;a.download=`pic-${new Date().toISOString().slice(0,10)}-${i+1}.jpg`;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),4000);},i*350));}
+    else if(kind==='copy'){await navigator.clipboard.write([new ClipboardItem({'image/png':pngOf(im[0])})]);}
+  }catch(e){if(e&&e.name==='AbortError')return;console.warn('pic use',e);
+    return toast(kind==='copy'?'Copy nahi hui — ⬇️ Save use karo':kind==='share'?'Share nahi hua — ⬇️ Save use karo':'Save nahi hui','error');}
+  finish(k,kind==='share'?'📤 Share ho gayi':kind==='save'?'⬇️ Save ho gayi':'📋 Copy ho gayi');
+};
+function finish(k,msg){
+  pend[k]=setTimeout(()=>commit(k),UNDO_MS);render();
+  let u=$('pk-undo');if(u)u.remove();u=document.createElement('div');u.id='pk-undo';u.className='pk-undo';
+  u.innerHTML=`<span>${X(msg)} — card khatam</span><button type="button">↩ Wapas</button>`;
+  u.querySelector('button').onclick=()=>{if(pend[k]){clearTimeout(pend[k]);delete pend[k];}u.remove();render();toast('↩ Card wapas aa gaya');};
+  document.body.appendChild(u);undoK=k;setTimeout(()=>{if(undoK===k&&u.parentNode)u.remove();},UNDO_MS);
+}
+async function commit(k){
+  const c=meta[k];delete pend[k];if(!c){render();return;}
+  try{await fbDb.ref().update({['piccards/'+c._o+'/'+c.id]:null,['picimgs/'+c._o+'/'+c.id]:null});delete imgs[k];delete meta[k];}
+  catch(e){toast('⚠️ Card delete nahi hua — internet check karo','error');}
+  render();
+}
+window.pkDel=function(k){if(!meta[k]||pend[k])return;if(!confirm('Ye pic card hata dein? Pics bhi chali jayengi.'))return;commit(k);toast('Card hata diya');};
+// Page band ho raha ho aur koi card "khatam" hone ke intezar mein ho to foran khatam karo
+window.addEventListener('pagehide',()=>{Object.keys(pend).forEach(k=>{clearTimeout(pend[k]);commit(k);});});
+
+// Login / logout ke saath khud chalo (caption card ko chhuye baghair)
+try{const _sa=window.showApp;if(typeof _sa==='function')window.showApp=function(){const r=_sa.apply(this,arguments);try{start();}catch(e){}return r;};}catch(e){}
+try{const _lo=window.doLogout;if(typeof _lo==='function')window.doLogout=function(){const r=_lo.apply(this,arguments);try{stop();pkMin(true);pill();}catch(e){}return r;};}catch(e){}
+setInterval(()=>{try{start();}catch(e){}},3000);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&isOpen)pkMin();});
 })();
 </script>
 
